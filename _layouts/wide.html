@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <title>{{ page.title }} | CU Boulder Web Style Guide | University of Colorado Boulder</title>
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/ucb-styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/elements/grid.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+    <!-- {{ site.url }} -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+
+
+    <!-- Copy code to clipboard -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+
+
+    <!-- Site JS -->
+    <script src="/js/styleguide.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('.code-example-code figure').each(function(i, block) {
+        //hljs.highlightBlock(block);
+      });
+    });
+    </script>
+
+  </head>
+  <body class="headings-bold background-color-black">
+    <div class="page">
+      <div class="background-black brand-bar brand-bar-black padding-vertical-small">
+        <div class="container">
+          <script type="text/javascript" src="https://cdn.colorado.edu/static/brand-assets/live/js/brand-bar.js" id="ucb-brand-bar-embed" data-color="black"></script>
+        </div>
+      </div>
+      <header class="ucb light" role="banner">
+        <div class="container">
+          <a href="/">CU Boulder Web Style Guide</a>
+        </div>
+      </header>
+      <div class="background-color-gray-dark">
+        <div class="container">
+          <nav role="navigation" class="ucb-navbar ucb-navbar-dark text-minify">
+            <label for="show-main-menu" class="show-menu" id="show-menu-label">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <span class="element-invisible">Menu</span>
+            </label>
+            <input type="checkbox" id="show-main-menu" role="button" aria-labelledby="show-menu-label">
+          <ul>
+            <li><a href="/" {% if page.section == "introduction" %}class="active"{% endif %}> <i class="fa fa-home"></i> <span class="display-inline invisible-md invisible-lg">Home</span></a></li>
+            <li><a href="/css.html" {% if page.section == "css" %}class="active"{% endif %}>CSS</a></li>
+            <li><a href="/branding.html" {% if page.section == "branding" %}class="active"{% endif %}>Branding</a></li>
+            <li><a href="/colors.html" {% if page.section == "colors" %}class="active"{% endif %}>Colors</a></li>
+            <li><a href="/content/" {% if page.section == "content" %}class="active"{% endif %}>Content</a></li>
+            <li><a href="/components/" {% if page.section == "components" %}class="active"{% endif %}>Components</a></li>
+            <li><a href="/grid.html" {% if page.section == "grid" %}class="active"{% endif %}>Grid</a></li>
+            <li><a href="/jsFrameworks.html" {% if page.section == "jsFrameworks" %}class="active"{% endif %}>JS Frameworks</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+      <div class="background-white padding-large-top">
+        <div class="container">
+          <h1 id="page-title">{{ page.title }}</h1>
+        </div>
+        <section class="page-content">
+          {{ content }}
+        </section>
+      </div>
+      <footer class="background-black padding-top padding-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              The <a href="/">CU Boulder Web Styleguide</a> is a resource provided by <a href="https://www.colorado.edu/strategicrelations">Strategic Relations and Communications</a>.
+            </div>
+            <div class="col-log-4 col-md-4 col-sm-6 col-xs-12 offset-lg-4 offset-md-4">
+              <script type="text/javascript" src="https://cdn.colorado.edu/static/brand-assets/live/js/footer.js" id="ucb-footer-embed" data-color="white"></script>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<!-- ### -->
+<!-- Build Time {{ site.time }} -->
