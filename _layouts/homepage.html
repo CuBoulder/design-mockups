@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <title>{{ page.title }} | CU Boulder Web Style Guide | University of Colorado Boulder</title>
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/elements/grid.css">
+    <link rel="stylesheet" href="/css/ucb-styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css">
+    <!-- {{ site.url }} -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+    <!-- Site JS -->
+   
+    <script>
+    $(document).ready(function() {
+      $('.code-example-code figure').each(function(i, block) {
+        //hljs.highlightBlock(block);
+      });
+    });
+    </script>
+
+
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }}">
+
+<!-- Twitter Meta Tags -->
+<meta property="twitter:domain" content="styleguide.colorado.edu">
+<meta property="twitter:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:title" content="{{ page.title }}">
+
+
+  </head>
+  <body class="headings-bold background-color-black">
+    <div class="page">
+      {{ content }}
+    </div>
+  </body>
+   <script src="/js/scripts.js"></script>
+</html>
+<!-- ### -->
+<!-- Build Time {{ site.time }} -->
